@@ -14,11 +14,25 @@
     <script defer src="assets/js/app.js"></script>
 </head>
 <body>
-    <div class="container">
-        <form action="" id="form">
-            <input type="text" id="link" placeholder="Escribe el texto o URL">
-        </form>
-        <div id="containerQR" class="container__qr"></div>
-    </div>
+    <header>
+        <div class="title">
+            <h2 class="header"><span class="js">JavaScript  App</h2>
+            <h1>QR Code Generator</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div>
+                <form action="" id="form" class="form">
+                    <h3 style="color:#000000; padding:60px 20px 20px 20px;">Here you can write a text or enter your url and it will generate a QR code</h3>
+                    <input type="text" id="link" placeholder="Write a text or URL">
+                    <button class="btn">Gnerater QR</button>
+                </form>
+            </div>
+            <div class="container__qr">
+                <div id="containerQR" ></div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

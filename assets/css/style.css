@@ -1,0 +1,83 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    height: 700px;
+	font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to right top, #1b1b1b, #494949, #7e7e7e, #b6b6b6, #f2f2f2);
+}
+.title{
+    text-align: center;
+}
+.header{
+    text-align: center;
+    margin-right: 250px;
+    padding: 20px 0 20px 0;
+}
+
+.container{
+	max-width: 90%;
+	width: auto;
+	margin: 40px 80px auto 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.form input[type='text'] {
+	padding: 20px;
+	border: none;
+	background: #f2f2f2;
+	width: 100%;
+	border-radius: 5px;
+    border: solid 2px #000;
+	box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+	font-size: 20px;
+	margin-bottom: 20px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.form .btn {
+	width: 100%;
+	border: none;
+	background: rgb(0, 0, 0);
+	color: #fff;
+	cursor: pointer;
+	padding: 20px;
+	font-size: 20px;
+	border-radius: 5px;
+	font-family: 'Open Sans', sans-serif;
+    transition: .3s
+}
+
+.form .btn:hover {
+	background: #f2f2f2;
+    border: solid 2px #000;
+    color: #000;
+}
+
+.btn:active{
+    transform: scale(0.7);
+    transition: 0.4s;
+}
+.container__qr {
+    width: 350px;
+    height: 450px;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+    border-radius: 15px ;
+    border: solid 3px #000;
+}
+
+#containerQR{
+    margin-top: 40px;
+    width: 260px;
+    height: 260px;
+    background-color: #f2f2f2;
+    border: solid 3px #000;
+}
