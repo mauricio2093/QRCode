@@ -5,13 +5,22 @@
 }
 
 body {
-    height: 700px;
+    height: 800px;
 	font-family: 'Open Sans', sans-serif;
-    background-image: linear-gradient(to right top, #1b1b1b, #494949, #7e7e7e, #b6b6b6, #f2f2f2);
+    background-image: linear-gradient(to right top, #051937, #444964, #808195, #bfbec8, #ffffff);
 }
+
 .title{
+    font-size: 22px;
     text-align: center;
+    color: #ffffff;
+    text-shadow: 
+        1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 2px 6px rgb(5, 25, 55,0.8),
+        1px 3px 10px rgb(5, 25, 55,0.6)
 }
+
 .header{
     text-align: center;
     margin-right: 250px;
@@ -27,24 +36,39 @@ body {
     justify-content: space-between;
     gap: 100px;
 }
-
+.shadow{
+    border: solid 3px #03132b;
+    border-radius: 15px;
+    box-shadow: rgba(5, 25, 55, 0.9) -12px 12px 16px 5px;
+    background-color: #ffffff;
+    padding: 20px;
+    
+}
+.info__container{
+    display: flex;
+}
+.img1{
+    width: 200px;
+    height: 200px;
+    padding: 20px 20px 0px 20px;
+}
 .form input[type='text'] {
 	padding: 20px;
 	border: none;
 	background: #f2f2f2;
 	width: 100%;
 	border-radius: 5px;
-    border: solid 2px #000;
-	box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+    border: solid 2px #051937;
+    box-shadow: rgba(5, 25, 55, 0.4) 0px 7px 29px 0px; 
 	font-size: 20px;
-	margin-bottom: 20px;
+	margin: 60px 50px 40px 0px;
 	font-family: 'Open Sans', sans-serif;
 }
 
 .form .btn {
 	width: 100%;
 	border: none;
-	background: rgb(0, 0, 0);
+	background: #03132b;
 	color: #fff;
 	cursor: pointer;
 	padding: 20px;
@@ -56,22 +80,27 @@ body {
 
 .form .btn:hover {
 	background: #f2f2f2;
-    border: solid 2px #000;
-    color: #000;
+    border: solid 2px #051937;
+    color: #051937;
 }
 
 .btn:active{
     transform: scale(0.7);
     transition: 0.4s;
 }
+
 .container__qr {
     width: 350px;
     height: 450px;
+    background-color: #ffffff;
 	display: flex;
+    flex-direction: column;
 	justify-content: center;
-	padding: 0;
+	padding: 40px;
     border-radius: 15px ;
-    border: solid 3px #000;
+    border: solid 4px rgb(3, 19, 43);
+    box-shadow: rgba(5, 25, 55, 0.9) -12px 12px 16px 5px;
+    gap: 40px;
 }
 
 #containerQR{
@@ -79,5 +108,33 @@ body {
     width: 260px;
     height: 260px;
     background-color: #f2f2f2;
-    border: solid 3px #000;
+    border: solid 3px rgb(3, 19, 43);  
+    box-shadow: rgba(5, 25, 55, 0.4) 0px 7px 29px 0px; 
+}
+
+.btnD{
+    width: 100%;
+	border: none;
+	background: rgb(3, 19, 43);
+	color: #fff;
+	cursor: pointer;
+	padding: 20px;
+	font-size: 20px;
+	border-radius: 5px;
+	font-family: 'Open Sans', sans-serif;
+    transition: .3s
+}
+.btnD:hover {
+	background: #f2f2f2;
+    border: solid 2px #051937;
+    color: #051937;
+}
+.btnD:active{
+    transform: scale(0.7);
+    transition: 0.4s;
+}
+.footer{
+    text-align: center;
+    padding: 40px;
+    color: #ffffff;
 }
