@@ -1,16 +1,42 @@
-const containerQR = document.getElementById('containerQR');
+const codeQR = document.getElementById('codeQR');
 const form = document.getElementById('form');
+let copyText = document.getElementById("copyText").innerText;
+const QR = new QRCode(codeQR);
 
-const QR = new QRCode(containerQR);
-
-form.addEventListener('submit', (e) =>{
+const qrcode = form.addEventListener('submit', (e) =>{
     e.preventDefault();
-    QR.makeCode(form.link.value);
+    QR.makeCode(form.siteUrl.value);
 })
-downloadQR(QR)
-function downloadQR() {
-    var link = document.createElement('a');
-    link.download = 'filename.png';
-    link.href = document.getElementById('QR').toDataURL()
+
+function downloadQR(){
+    let dataUrl=document.querySelector('#codeQR').querySelector('img').src;
+    var link=document.createElement('a');
+    link.download='QRcode.png';
+    link.href=dataUrl;
+    document.body.appendChild(link);
     link.click();
-} 
+    document.body.removeChild(link);
+    delete link;
+
+    
+}
+
+//copy Image to Clipboard
+function copyQR(){
+    let img=document.querySelector('#codeQR').querySelector('img');
+    const canvas=document.createElement('canvas');
+    canvas.width=img.width;
+    canvas.height=img.height;
+    canvas.getContext('2d').drawImage(img,0,0,img.width,img.height);
+    canvas.toBlob((blob)=>{
+        navigator.clipboard.write([new ClipboardItem({'image/png':blob})]);
+    },'image/png');
+
+    console.log('success');
+    copyText = 'Copied !';
+    document.getElementById("copyText").innerText = copyText;
+    setTimeout(()=>{
+        copyText = ' ';
+        document.getElementById("copyText").innerText = copyText;
+    },1500);
+}
