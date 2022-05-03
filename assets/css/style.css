@@ -92,6 +92,7 @@ body {
 .container__qr {
     width: 350px;
     height: 450px;
+    margin: auto;
     background-color: #ffffff;
 	display: flex;
     flex-direction: column;
@@ -104,6 +105,7 @@ body {
 }
 
 #containerQR{
+    display: block;
     margin-top: 40px;
     width: 260px;
     height: 260px;
@@ -137,4 +139,48 @@ body {
     text-align: center;
     padding: 40px;
     color: #ffffff;
+}
+.git{
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+
+
+@media (max-width: 1000px) {
+    body {
+        height: 1000px;
+    }
+    .info__container{
+        flex-direction: column;
+        text-align: center;
+        padding: auto;
+        display:block;
+        margin:auto;
+    }
+}
+@media (max-width: 800px) {
+    body {
+        height: 1500px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    #containerQR{
+        display:block;
+        margin:auto;
+    }
+}
+@media (max-width: 490px) {
+    body {
+        height: 1800px;
+    }
+    .footer{
+        padding: 150px 40px 40px 40px;
+    }
+}
+@media (max-width: 390px) {
+    body {
+        height: 2000px;
+    }
 }
