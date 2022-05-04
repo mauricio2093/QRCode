@@ -7,13 +7,19 @@ let copyText = document.getElementById("copyText").innerText;
 console.log('Paso al else');
 const QR = new QRCode(codeQR);
 
-const qrcode = form.addEventListener('submit', (e) =>{
+form.addEventListener('submit', (e) =>{
     e.preventDefault();
     const qt = QR.makeCode(form.siteUrl.value);
     console.log(qt);
 })
 
 
+/**
+ * It creates a link element, sets the download attribute to the name of the file, sets the href
+ * attribute to the dataUrl of the image, appends the link to the body, clicks the link, removes the
+ * link from the body, and deletes the link.
+ * </code>
+ */
 function downloadQR(){
     let dataUrl=document.querySelector('#codeQR').querySelector('img').src;
     var link=document.createElement('a');
