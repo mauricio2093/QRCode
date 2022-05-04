@@ -1,12 +1,18 @@
 const codeQR = document.getElementById('codeQR');
 const form = document.getElementById('form');
 let copyText = document.getElementById("copyText").innerText;
+
+
+
+console.log('Paso al else');
 const QR = new QRCode(codeQR);
 
 const qrcode = form.addEventListener('submit', (e) =>{
     e.preventDefault();
-    QR.makeCode(form.siteUrl.value);
+    const qt = QR.makeCode(form.siteUrl.value);
+    console.log(qt);
 })
+
 
 function downloadQR(){
     let dataUrl=document.querySelector('#codeQR').querySelector('img').src;
@@ -17,8 +23,6 @@ function downloadQR(){
     link.click();
     document.body.removeChild(link);
     delete link;
-
-    
 }
 
 //copy Image to Clipboard
@@ -35,8 +39,10 @@ function copyQR(){
     console.log('success');
     copyText = 'Copied !';
     document.getElementById("copyText").innerText = copyText;
+
     setTimeout(()=>{
         copyText = ' ';
         document.getElementById("copyText").innerText = copyText;
     },1500);
 }
+
